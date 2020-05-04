@@ -1,2 +1,2 @@
 # rownianiekwadratowe
-kod obliczajacy wartosci miejsc zerowych w rownaniu kwadratowym
+JAVA/ prosty kod obliczajacy wartosci miejsc zerowych w rownaniu kwadratowym
