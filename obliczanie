@@ -1,0 +1,79 @@
+public class RownanieKwadratowe {
+
+    public double a;
+    public double b;
+    public double c;
+
+    public RownanieKwadratowe(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    private double obliczDelta() {
+        return b * b - 4 * a * c;
+
+    }
+
+    private double obliczPierwiastek1() {
+        return -b / (2 * a);
+    }
+
+    private double obliczPierwastek2() {
+       return (-b - Math.sqrt(obliczDelta())) / (2 * a);
+
+
+    }
+    private double obliczPierwiastek3(){
+
+        return (-b + Math.sqrt(obliczDelta())) / (2 * a);
+    }
+
+    public void wyswietlPierwiastki() {
+        if (a != 0) {
+            if (obliczDelta() == 0) {
+                double x1 = -b / (2 * a);
+                System.out.println("Miejsce zerowe = " + x1);
+
+
+            } else if (obliczDelta() < 0){
+                System.out.println("Równianie nie ma rozwiązań");
+
+
+            } else {
+                double x1 = (-b - obliczDelta()) / (2 * a);
+                double x2 = (-b + obliczDelta()) / (2 * a);
+                System.out.println("Wartości miejsc zerowych to x1 = " + x1 + " x2= " + x2);
+            }
+
+        } else
+            System.out.println("to nie jest równianie kwadratowe");
+
+    }
+
+    public static void main(String[] args) {
+        double a = 4, b = 5 , c = 1, x1, x2;
+
+        double delta = b * b - 4* a * c;
+        double pierwiastek = Math.sqrt(delta);
+
+        if (a != 0) {
+        if (delta == 0) {
+            x1 = -b / (2 * a);
+            System.out.println("Miejsce zerowe = " + x1);
+
+
+        } else if (delta < 0){
+            System.out.println("Równianie nie ma rozwiązań");
+
+
+        } else {
+            x1 = (-b - pierwiastek) / (2 * a);
+            x2 = (-b + pierwiastek) / (2 * a);
+            System.out.println("Wartości miejsc zerowych to x1 = " + x1 + " x2= " + x2);
+        }
+
+        } else
+            System.out.println("to nie jest równianie kwadratowe");
+    }
+}
